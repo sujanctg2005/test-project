@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="CONSOLE" />
+		</Root>
+
+		<logger name="log4j.logger.org.apache.http.impl.conn" level="info">
+			<AppenderRef ref="CONSOLE" />
+		</logger>
+		<logger name="log4j.logger.org.apache.http.impl.client" level="info">
+			<AppenderRef ref="CONSOLE" />
+		</logger>
+		<logger name="org.apache.http.wire" level="info">
+			<AppenderRef ref="CONSOLE" />
+		</logger>
+		
+		
+		<logger name="og4j.logger.org.apache.http.client" level="info">
+			<AppenderRef ref="CONSOLE" />
+		</logger>
+		<logger name="org.springframework" level="error">
+			<AppenderRef ref="CONSOLE" />
+		</logger>
+	<!-- 	<logger name="com.lab" level="debug">
+			<AppenderRef ref="CONSOLE" />
+		</logger> -->
+
+	</Loggers>
+</Configuration>
