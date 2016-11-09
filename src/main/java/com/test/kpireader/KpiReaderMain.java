@@ -27,27 +27,29 @@ public class KpiReaderMain {
 		// "A-hrlGd14-iz0", "A-kIkGd14-iz0", "A-XXkGd14-iz0" };
 		Map<String, String> clinetNameMap = new HashMap<String, String>();
 
-		clinetNameMap.put("A-3amGd14-iz0", "MYTMO");
+        clinetNameMap.put("A-3amGd14-iz0", "MYTMO");
 
-		clinetNameMap.put("A-vWlGd14-iz0", "TIBCO-ODP4");
+		//clinetNameMap.put("A-vWlGd14-iz0", "TIBCO-ODP4");
 		clinetNameMap.put("A-SGlGd14-iz0", "EUI PM");
 
 		clinetNameMap.put("Assurant", "Assurant");
-		clinetNameMap.put("A-30uiP64-iz0", "DSPA");
-		clinetNameMap.put("mwPhone2-0", "middleware");
+		clinetNameMap.put("A-30uiP64-iz0", "Middleware "); 
+		clinetNameMap.put("kyobiPL01", "TMO Tuesday");
+		
+		//clinetNameMap.put("mwPhone2-0", "middleware");
 
 		String[] clientIdList = clinetNameMap.keySet().toArray(new String[clinetNameMap.keySet().size()]);
 
-		String[] dateList = { "2016-05-24", "2016-05-25", "2016-05-26", "2016-05-27", "2016-05-28", "2016-05-29",
-				"2016-05-30", "2016-05-30" };
-		// String[] dateList = { "2016-05-20","2016-05-21"};
+
+		String[] dateList ={"2016-10-25","2016-10-26","2016-10-27","2016-10-28","2016-10-29","2016-10-30","2016-10-31","2016-11-01"};
+		// String[] dateList = { "2016-10-04"};
 		String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfo-SUCCESS,UserInfo-ERROR";
-		// String apis = "UserInfo-SUCCESS,UserInfo-ERROR";
+		// String apis ="Authenticate-ERROR";
 		// String apis =
 		// "UpdateServicePermissionFlag-SUCCESS,UpdateServicePermissionFlag-ERROR,ValidateToken-SUCCESS,ValidateToken-ERROR";
 		String[] apiList = apis.split(",");
 
-		ExecutorService threadPool = Executors.newFixedThreadPool(10);
+		ExecutorService threadPool = Executors.newFixedThreadPool(5);
 
 		CompletionService<KpiResult> pool = new ExecutorCompletionService<KpiResult>(threadPool);
 		int count = 0;
@@ -62,7 +64,7 @@ public class KpiReaderMain {
 					kpiModel.setResultCode(api.split("-")[1]);
 					// kpiModel.setErrorCode(errorCode);
 					kpiModel.setDate(date);
-					kpiModel.setType("TPS");
+					kpiModel.setType("Counts");
 					KpiReadTask task = new KpiReadTask(kpiModel, "http://10.92.28.199:8081/counts");
 					pool.submit(task);
 					count = count + 1;

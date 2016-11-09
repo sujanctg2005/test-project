@@ -28,7 +28,7 @@ public class KpiReaderErrorBreakDownMain {
 			Map<String, String> clinetNameMap = new HashMap<String, String>();
 
 			clinetNameMap.put("A-3amGd14-iz0", "MYTMO");
-
+			//clinetNameMap.put("kyobiPL01", "TMO Tuesday");
 			/*clinetNameMap.put("A-vWlGd14-iz0", "TIBCO-ODP4");
 			clinetNameMap.put("A-SGlGd14-iz0", "EUI PM");
 
@@ -38,22 +38,21 @@ public class KpiReaderErrorBreakDownMain {
 
 			String[] clientIdList = clinetNameMap.keySet().toArray(new String[clinetNameMap.keySet().size()]);
 
-			String[] dateList = { "2016-05-24", "2016-05-25", "2016-05-26", "2016-05-27", "2016-05-28", "2016-05-29",
-					"2016-05-30", "2016-05-30" };
-			// String[] dateList = { "2016-05-20","2016-05-21"};
+			String[] dateList ={"2016-10-25","2016-10-26","2016-10-27","2016-10-28","2016-10-29","2016-10-30","2016-10-31","2016-11-01"};
+			//String[] dateList = { "2016-10-04"};
 			//String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfo-SUCCESS,UserInfo-ERROR";
 			// String apis = "UserInfo-SUCCESS,UserInfo-ERROR";
 		     String apis ="Authenticate-ERROR";
 			// "UpdateServicePermissionFlag-SUCCESS,UpdateServicePermissionFlag-ERROR,ValidateToken-SUCCESS,ValidateToken-ERROR";
 			String[] apiList = apis.split(",");
 
-			ExecutorService threadPool = Executors.newFixedThreadPool(10);
+			ExecutorService threadPool = Executors.newFixedThreadPool(5);
 
 			CompletionService<KpiResult> pool = new ExecutorCompletionService<KpiResult>(threadPool);
 			int count = 0;
 
 			for (String clientId : clientIdList) {
-				System.out.println("Client id: " + clientId);
+				//System.out.println("Client id: " + clientId);
 				for (String date : dateList) {
 					for (String api : apiList) {
 						KpiModel kpiModel = new KpiModel();
@@ -69,7 +68,7 @@ public class KpiReaderErrorBreakDownMain {
 					}
 				}
 			}
-			System.out.println("Request submit done , total request:" + count);
+			//System.out.println("Request submit done , total request:" + count);
 			StringBuffer allResult = new StringBuffer();
 			allResult.append("Client Id,Date,API,TPS\n");
 

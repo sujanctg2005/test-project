@@ -11,8 +11,8 @@ import java.util.concurrent.Executors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class KpiReaderAPIKPIMain {
-	static final Logger logger = LogManager.getLogger(KpiReaderAPIKPIMain.class.getName());
+public class KpiReaderAPIKPIMainNoNeed {
+	static final Logger logger = LogManager.getLogger(KpiReaderAPIKPIMainNoNeed.class.getName());
 
 	public static void main(String... args) {
 
@@ -40,8 +40,7 @@ public class KpiReaderAPIKPIMain {
 
 			String[] clientIdList = clinetNameMap.keySet().toArray(new String[clinetNameMap.keySet().size()]);
 
-			String[] dateList = { "2016-05-25", "2016-05-26", "2016-05-27", "2016-05-28", "2016-05-29", "2016-05-30",
-					"2016-05-31"};
+			String[] dateList = {"2016-08-02","2016-08-03","2016-08-04","2016-08-05","2016-08-06","2016-08-07","2016-08-08","2016-08-09"};
 			//String[] dateList = { "2016-05-20","2016-05-21"};
 			 String apis =
 			 "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfo-SUCCESS,UserInfo-ERROR";
