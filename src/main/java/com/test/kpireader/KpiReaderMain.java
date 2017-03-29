@@ -41,9 +41,9 @@ public class KpiReaderMain {
 		String[] clientIdList = clinetNameMap.keySet().toArray(new String[clinetNameMap.keySet().size()]);
 
 
-		String[] dateList ={"2016-10-25","2016-10-26","2016-10-27","2016-10-28","2016-10-29","2016-10-30","2016-10-31","2016-11-01"};
+		String[] dateList ={"2017-03-20","2017-03-21","2017-03-22","2017-03-23","2017-03-24","2017-03-25","2017-03-26","2017-03-27"};
 		// String[] dateList = { "2016-10-04"};
-		String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfo-SUCCESS,UserInfo-ERROR";
+		String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfoV1-SUCCESS,UserInfoV1-ERROR";
 		// String apis ="Authenticate-ERROR";
 		// String apis =
 		// "UpdateServicePermissionFlag-SUCCESS,UpdateServicePermissionFlag-ERROR,ValidateToken-SUCCESS,ValidateToken-ERROR";
