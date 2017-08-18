@@ -41,9 +41,9 @@ public class KpiReaderMain {
 		String[] clientIdList = clinetNameMap.keySet().toArray(new String[clinetNameMap.keySet().size()]);
 
 
-		String[] dateList ={"2017-03-20","2017-03-21","2017-03-22","2017-03-23","2017-03-24","2017-03-25","2017-03-26","2017-03-27"};
+		String[] dateList ={"2017-05-01","2017-05-02","2017-05-03","2017-05-04","2017-05-05","2017-05-06","2017-05-07","2017-05-08"};
 		// String[] dateList = { "2016-10-04"};
-		String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfoV1-SUCCESS,UserInfoV1-ERROR";
+		String apis = "Authenticate-SUCCESS,Authenticate-ERROR,Authorize-SUCCESS,Authorize-ERROR,UserInfoV1-SUCCESS,UserInfoV1-ERROR,UserInfoV2-SUCCESS,UserInfoV2-ERROR";
 		// String apis ="Authenticate-ERROR";
 		// String apis =
 		// "UpdateServicePermissionFlag-SUCCESS,UpdateServicePermissionFlag-ERROR,ValidateToken-SUCCESS,ValidateToken-ERROR";
@@ -80,6 +80,7 @@ public class KpiReaderMain {
 		for (int i = 0; i < count; i++) {
 
 			try {
+
 				KpiResult kpiResult = pool.take().get();
 				String key = kpiResult.getKpiModel().getClientId() + "/" + kpiResult.getKpiModel().getDate() + "/"
 						+ kpiResult.getKpiModel().getApiName() + "-" + kpiResult.getKpiModel().getResultCode();

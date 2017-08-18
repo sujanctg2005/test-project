@@ -29,15 +29,15 @@ public class KpiReadTask implements Callable<KpiResult> {
 				// Counts type=TPS&
 
 			  // error break down
-				queryParam = String.format(
+			/*	queryParam = String.format(
 				 "?api_name=%s&client_id=%s&result_code=%s&dates=%s&type=%s&error_code=%s&interval=86400",
 				 kpiModel.getApiName(), kpiModel.getClientId(),
 				 kpiModel.getResultCode(), kpiModel.getDate(),
-				kpiModel.getType(),kpiModel.getErrorCode());	
+				kpiModel.getType(),kpiModel.getErrorCode());*/
               // counts
-			/*queryParam = String.format("?api_name=%s&client_id=%s&result_code=%s&dates=%s&type=%s&interval=86400",
+			queryParam = String.format("?api_name=%s&client_id=%s&result_code=%s&dates=%s&type=%s&interval=86400",
 						kpiModel.getApiName(), kpiModel.getClientId(), kpiModel.getResultCode(), kpiModel.getDate(),
-						kpiModel.getType());*/
+						kpiModel.getType()); 
 			}
 			String url = serviceEndPoint + queryParam;
 

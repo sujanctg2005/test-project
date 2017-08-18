@@ -369,27 +369,24 @@ public class LinkList {
 		/*
 		 * LinkList linkList = new LinkList(); int []
 		 * dataList={10,11,12,13,14,15,16,17,18,19,20}; for(int data:dataList){
-		 * linkList.add(data); }
-		 * System.out.println("LinkList size:"+linkList.length());
+		 * linkList.add(data); } System.out.println("LinkList size:"+linkList.length());
 		 * linkList.printList(); linkList.delete(0); linkList.delete(0);
 		 * System.out.println("\nAfter deleting:"); linkList.printList();
 		 */
 
 		/********* Example 2( sort 0's 1's and 2's) *******************/
 		/*
-		 * LinkList linkList = new LinkList(); int []
-		 * dataList={1,2,2,1,1,0,2,0,0,2,1}; for(int data:dataList){
-		 * linkList.add(data); }
-		 * System.out.println("LinkList size:"+linkList.length());
-		 * linkList.printList(); linkList.sortLinkListZeroToTwo();
-		 * linkList.printList();
+		 * LinkList linkList = new LinkList(); int [] dataList={1,2,2,1,1,0,2,0,0,2,1};
+		 * for(int data:dataList){ linkList.add(data); }
+		 * System.out.println("LinkList size:"+linkList.length()); linkList.printList();
+		 * linkList.sortLinkListZeroToTwo(); linkList.printList();
 		 */
 		/********* Example 3(skip M and delete N) *******************/
 		/*
 		 * LinkList linkList = new LinkList(); int[] dataList = {
 		 * 10,11,12,13,14,15,16,17,18,19,20}; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList(); linkList.skipAndRemove(2,
-		 * 2); linkList.printList();
+		 * linkList.add(data); } linkList.printList(); linkList.skipAndRemove(2, 2);
+		 * linkList.printList();
 		 */
 		/********* Example 4(Reverse linked list) *******************/
 
@@ -403,9 +400,8 @@ public class LinkList {
 		/********* Example 5(Reverse linked list) *******************/
 
 		/*
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); }
+		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12, 13, 14,
+		 * 15, 16, 17, 18, 19, 20 }; for (int data : dataList) { linkList.add(data); }
 		 * 
 		 * linkList.printList(); linkList.reversListV2(); linkList.printList();
 		 */
@@ -413,10 +409,9 @@ public class LinkList {
 		/********* Example 6(Reverse linked list) *******************/
 
 		/*
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList(); linkList.reversListV3();
-		 * linkList.printList();
+		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12, 13, 14,
+		 * 15, 16, 17, 18, 19, 20 }; for (int data : dataList) { linkList.add(data); }
+		 * linkList.printList(); linkList.reversListV3(); linkList.printList();
 		 */
 
 		/*********
@@ -425,8 +420,8 @@ public class LinkList {
 		/*
 		 * LinkList linkList = new LinkList(); int[] dataList = {
 		 * 10,11,11,13,13,15,16,16,16,19,20}; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList();
-		 * linkList.removeDuplicate(); linkList.printList();
+		 * linkList.add(data); } linkList.printList(); linkList.removeDuplicate();
+		 * linkList.printList();
 		 */
 
 		/*********
@@ -434,10 +429,9 @@ public class LinkList {
 		 *******************/
 
 		/*
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList();
-		 * linkList.reverseAndSkip(); linkList.printList();
+		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12, 13, 14,
+		 * 15, 16, 17, 18, 19, 20 }; for (int data : dataList) { linkList.add(data); }
+		 * linkList.printList(); linkList.reverseAndSkip(); linkList.printList();
 		 */
 		/*********
 		 * Example 9(Loop detection and removed loop)
@@ -449,12 +443,11 @@ public class LinkList {
 
 		/********* Example 10(merge linked list) *******************/
 		/*
-		 * LinkList firstLinkList = new LinkList(); int[] dataList1 = { 10, 11,
-		 * 12, 13, 14}; for (int data : dataList1) { firstLinkList.add(data); }
-		 * firstLinkList.printList(); LinkList secondLinkList = new LinkList();
-		 * int[] dataList2 = { 1,2, 3, 4, 5, 6, 7, 8, 18, 19, 20 }; for (int
-		 * data : dataList2) { secondLinkList.add(data); }
-		 * secondLinkList.printList();
+		 * LinkList firstLinkList = new LinkList(); int[] dataList1 = { 10, 11, 12, 13,
+		 * 14}; for (int data : dataList1) { firstLinkList.add(data); }
+		 * firstLinkList.printList(); LinkList secondLinkList = new LinkList(); int[]
+		 * dataList2 = { 1,2, 3, 4, 5, 6, 7, 8, 18, 19, 20 }; for (int data : dataList2)
+		 * { secondLinkList.add(data); } secondLinkList.printList();
 		 * 
 		 * mergeLinkedList(firstLinkList,secondLinkList);
 		 * 
@@ -466,41 +459,63 @@ public class LinkList {
 		/********* Example 11(moveLastAsFirst list) *******************/
 		/*
 		 * 
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList();
-		 * linkList.moveLastAsFirst(); linkList.printList();
+		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12, 13, 14,
+		 * 15, 16, 17, 18, 19, 20 }; for (int data : dataList) { linkList.add(data); }
+		 * linkList.printList(); linkList.moveLastAsFirst(); linkList.printList();
 		 */
 
 		/********* Example 11(moveLastAsFirst list) *******************/
 
 		/*
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList(); linkList.swap();
-		 * linkList.printList();
+		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12, 13, 14,
+		 * 15, 16, 17, 18, 19, 20 }; for (int data : dataList) { linkList.add(data); }
+		 * linkList.printList(); linkList.swap(); linkList.printList();
 		 */
 
 		/********* Example 12(rotate list) *******************/
 
-		/*
-		 * LinkList linkList = new LinkList(); int[] dataList = { 10, 11, 12,
-		 * 13, 14, 15, 16, 17, 18, 19, 20 }; for (int data : dataList) {
-		 * linkList.add(data); } linkList.printList(); linkList.rotate(4);
-		 * linkList.printList();
-		 */
-
-		/********* Example 13(insert sorted data) *******************/
-
 		LinkList linkList = new LinkList();
 		int[] dataList = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
 		for (int data : dataList) {
-			linkList.insertSortedData(data);
+			linkList.add(data);
 		}
 		linkList.printList();
+		linkList.rotate(4);
+		linkList.printList();
+
+		/********* Example 13(insert sorted data) *******************/
+
+		//
+		// LinkList linkList = new LinkList();
+		// int[] dataList = { 20,30,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+		// for (int data : dataList) {
+		// linkList.insertSortedData(data);
+		//
+		// }
+		// linkList.printList();
 
 	}
 
+	
+	public void rotate1(int pos) {
+		Node tempTop = top;
+		Node current=top;
+		while((--pos)<0) {
+			current =current.getNext();
+		}
+		
+		if(current!=null &&  current.getNext()!=null) {
+			
+			top=current.getNext();
+			current.setNext(null);
+		}
+		current=top;
+		while(current.getNext()!=null) {
+			current=current.getNext();
+		}
+		current.setNext(tempTop);
+	}
+	
 	public static void mergeLinkedList(LinkList firstLinkList, LinkList secondLinkList) {
 
 		Node firstLinkCurrentNode = firstLinkList.getTop();
